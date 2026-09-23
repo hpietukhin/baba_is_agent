@@ -23,6 +23,10 @@ reporting = [
     "matplotlib>=3.10.0",
     "seaborn>=0.13.2",
 ]
+asp = [
+    "clingo>=5.7",
+    "clorm>=1.6",
+]
 
 [dependency-groups]
 dev = [
