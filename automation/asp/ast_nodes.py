@@ -3,13 +3,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from enum import Enum, auto
-
-
-class TokenType(Enum):
-    NOUN = auto()
-    OPERATOR = auto()
-    PROPERTY = auto()
 
 
 @dataclass(frozen=True, slots=True)

@@ -5,12 +5,7 @@ from __future__ import annotations
 from clorm import FactBase
 
 from automation.asp.ast_nodes import RuleNode
-from automation.asp.lexer import (
-    extract_rules_horizontal,
-    extract_rules_vertical,
-    extract_text_tokens,
-)
-from automation.asp.parser import parse_rules
+from automation.asp.parser import parse_grid
 from automation.asp.predicates import AtInit, RuleIs, TextBlock
 
 # Background objects that don't participate in game logic
@@ -86,9 +81,7 @@ def generate_facts(
     if custom_rules is not None:
         rules = custom_rules
     else:
-        horiz = extract_rules_horizontal(grid)
-        vert = extract_rules_vertical(grid)
-        rules = parse_rules(horiz + vert)
+        rules = parse_grid(grid)
 
     for rule in rules:
         fb.add(

@@ -26,6 +26,7 @@ reporting = [
 asp = [
     "clingo>=5.7",
     "clorm>=1.6",
+    "pyparsing>=3.2",
 ]
 
 [dependency-groups]
